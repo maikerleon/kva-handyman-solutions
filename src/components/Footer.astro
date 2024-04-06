@@ -1,0 +1,78 @@
+
+---
+import { data } from '#lib/data.ts';
+import Button from '#components/Button.astro';
+import FacebookIcon from '#icons/FacebookIcon.astro';
+import InstagramIcon from '#icons/InstagramIcon.astro';
+import YoutubeIcon from '#icons/YoutubeIcon.astro';
+const footerNavs = [
+        {
+            href: 'javascript:void()',
+            name: 'Terms'
+        },
+        {
+            href: 'javascript:void()',
+            name: 'License'
+        },
+        {
+            href: 'javascript:void()',
+            name: 'Privacy'
+        },
+        {
+            href: 'javascript:void()',
+            name: 'About us'
+        }
+];
+---
+
+<footer class="pt-10 bg-kv-950">
+    <div class="max-w-screen-xl mx-auto px-4 text-white md:px-8">
+        <div class="justify-between sm:flex">
+            <div class="space-y-6">
+                <img src="logo-white.webp" class="w-60" />
+                <p class="max-w-md">
+                    Nulla auctor metus vitae lectus iaculis, vel euismod massa efficitur.
+                </p>
+                <div>
+                    <ul class="flex flex-wrap items-center gap-4 text-sm sm:text-base mt-14">
+                        {
+                            footerNavs.map((item, idx) => (
+                                <li class="text-gray-300 hover:text-white duration-150">
+                                    <a href={item.href}>
+                                        {item.name}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6">
+                <p class="text-white font-semibold text-3xl">Get the app</p>
+                <div class="flex items-center gap-3 mt-5 flex-col">
+                    <Button text="Get Quote now" link="/" styles="min-w-full" />
+                </div>
+                <ul class="flex gap-x-4 [&>li]:flex [&>li]:gap-x-1 [&>li]:items-center items-center mt-5 justify-end">
+                    <li>
+                        <a href="/">
+                            <FacebookIcon size={24} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <InstagramIcon size={24} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <YoutubeIcon size={24} />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-10 py-10 border-t border-gray-100/10 md:text-center">
+            <p>© {new Date().getFullYear()} | {data.title}.</p>
+        </div>
+    </div>
+</footer>

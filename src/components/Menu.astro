@@ -1,0 +1,27 @@
+---
+import {data} from '#lib/data.ts'
+import Button from '#components/Button.astro'
+---
+
+<nav class="flex py-5 justify-between items-center">
+    <div class="flex gap-x-14 items-center">
+        <img src="logo.webp" alt={`${data.title}`} class="w-64">
+        <ul class="flex gap-x-4 uppercase text-base [&>li]:text-kv-900 [&>.active]:border-b-[2.5px] [&>li]:font-medium [&>.active]:border-kv-500 [&>.active]:text-kv-500">
+            <li class="active">
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/services">Services</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <Button text="Free Quotes" link="/" />
+    </div>
+</nav>

@@ -1,0 +1,67 @@
+---
+import StarIcon from "./icons/StarIcon.astro";
+
+const tags = ["Gardening 1", "Gardening 2", "Gardening 3", "Gardening 4", "Gardening 5", "Gardening 6", "Gardening 7", "Gardening 8", "Gardening 9", "Gardening 10"];
+---
+
+<section class="bg-kv-500 text-white px-3 py-8 max-w-full overflow-hidden w-full whitespace-nowrap flex space-x-10 slider-content relative">
+    <div class="space-x-10 flex slider-wrapper">
+        {
+            tags.map(tag => (
+            <article class="flex gap-x-4 items-center">
+                <span class="font-semibold text-lg">{tag}</span>
+                <StarIcon />
+            </article>
+            ))
+        }
+    </div>
+    <div class="space-x-10 flex slider-wrapper">
+        {
+            tags.map(tag => (
+            <article class="flex gap-x-4 items-center">
+                <span class="font-semibold text-lg">{tag}</span>
+                <StarIcon />
+            </article>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+.slider-wrapper {
+    animation: slide-infinite 20s linear infinite;
+}
+
+.slider-content:hover .slider-wrapper {
+    animation-play-state: paused;
+}
+
+.slider-content:before, .slider-content:after { 
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100px;
+    z-index: 2;
+    content: '';
+}
+
+.slider-content:before {
+    left: 0;
+    background: linear-gradient(to right, #08a2ff, transparent);
+}
+
+.slider-content:after {
+    right: 0;
+    background: linear-gradient(to left, #08a2ff, transparent);
+}
+
+@keyframes slide-infinite {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+</style>

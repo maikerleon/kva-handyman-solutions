@@ -1,0 +1,40 @@
+---
+import { data } from "#lib/data.ts";
+import EmailIcon from "#icons/EmailIcon.astro";
+import LocationIcon from "#icons/LocationIcon.astro";
+import FacebookIcon from "#icons/FacebookIcon.astro";
+import InstagramIcon from "#icons/InstagramIcon.astro";
+import YoutubeIcon from "#icons/YoutubeIcon.astro";
+---
+
+<header class="w-full flex bg-kv-900 text-white h-12">
+    <section class="max-w-[92%] w-full mx-auto py-2 flex justify-between items-center">
+        <ul class="flex gap-x-12 [&>li]:flex [&>li]:gap-x-1 [&>li]:items-center items-center">
+            <li>
+                <EmailIcon size={24} styles="mr-0.5" />
+                <span>{data.email}</span>
+            </li>
+            <li>
+                <LocationIcon size={24} />
+                <span>{data.address}</span>
+            </li>
+        </ul>
+        <ul class="flex gap-x-6 [&>li]:flex [&>li]:gap-x-1 [&>li]:items-center items-center">
+            <li>
+                <a href="/">
+                    <FacebookIcon size={24} />
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <InstagramIcon size={24} />
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <YoutubeIcon size={24} />
+                </a>
+            </li>
+        </ul>
+    </section>
+</header>

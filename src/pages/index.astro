@@ -1,0 +1,21 @@
+---
+import { data } from "#lib/data.ts";
+import Layout from '../layouts/Layout.astro';
+import Banner from "#components/Banner.astro";
+import Slider from "#components/Slider.astro";
+import MiniAbout from "#components/MiniAbout.astro";
+import WhyUs from "#components/WhyUs.astro";
+import Cta from "#components/Cta.astro";
+import BannerSection from "#components/BannerSection.astro";
+---
+
+<Layout title={data.title}>
+	<div class="flex flex-col w-full">
+		<Banner />
+		<Slider />
+		<MiniAbout />
+		<WhyUs />
+		<BannerSection />
+		<Cta />
+	</div>
+</Layout>

@@ -1,0 +1,70 @@
+---
+import {data} from '#lib/data.ts'
+import Button from '#components/Button.astro'
+import PhoneIcon from '#icons/PhoneIcon.astro'
+import EmailIcon from '#icons/EmailIcon.astro'
+---
+<section class="text-gray-600">
+    <div class="px-16 pt-28 pb-14 bg-[url(img/background-section.webp)] bg-no-repeat bg-cover bg-center">
+        <header class="flex items-center gap-x-36">
+            <div class="w-5/6 flex flex-col gap-y-8">
+                <h1 class="text-2xl uppercase font-semibold tracking-[3px]">About us</h1>
+                <span class="text-4xl tracking-[2.5px]">
+                    We Will Make Your Home Better By Providing <b class="text-6xl text-kv-500 font-bold">Exceptional Services like image Repairing, Plumbing, Electrical, etc</b> Within your Budget
+                </span>
+            </div>
+        </header>
+        <div class="custom-grid p-5">
+            <div class="overflow-hidden w-full h-full rounded-2xl">
+                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden w-full h-full rounded-2xl">
+                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden w-full h-full rounded-2xl">
+                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden w-full h-full rounded-2xl">
+                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden w-full h-full rounded-2xl">
+                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+    
+    <aside class="flex bg-slate-800 text-white justify-between px-12 py-6 items-center">
+        <div class="flex items-center gap-x-8">
+            <span class="flex items-center gap-x-2">
+                <PhoneIcon size={35} />
+                <strong class="text-lg font-normal">{data.phone}</strong>
+            </span>
+            <div class="h-10 w-0.5 bg-white"></div>
+            <span class="flex items-center gap-x-2">
+                <EmailIcon size={35} />
+                <strong class="text-lg font-normal">{data.email}</strong>
+            </span>
+        </div>
+        <div class="flex items-center gap-x-8">
+            <div class="h-0.5 bg-kv-500 w-40"></div>
+            <strong class="text-2xl font-semibold">Book Your First Service & Get 30% Off</strong>
+            <Button text="Book now" link="/" />
+        </div>
+    </aside>
+</section>
+
+<style>
+    .custom-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 80px);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+    }
+
+    .custom-grid > div:nth-child(1) { grid-area: 2 / 1 / 7 / 2; }
+    .custom-grid > div:nth-child(2) { grid-area: 4 / 2 / 7 / 3; }
+    .custom-grid > div:nth-child(3) { grid-area: 3 / 3 / 7 / 4; }
+    .custom-grid > div:nth-child(4) { grid-area: 1 / 4 / 4 / 5; }
+    .custom-grid > div:nth-child(5) { grid-area: 4 / 4 / 7 / 5; }
+</style>
