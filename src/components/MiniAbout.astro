@@ -3,6 +3,7 @@ import {data} from '#lib/data.ts'
 import Button from '#components/Button.astro'
 import PhoneIcon from '#icons/PhoneIcon.astro'
 import EmailIcon from '#icons/EmailIcon.astro'
+import CardImage from './CardImage.astro'
 ---
 <section class="text-gray-600">
     <div class="px-16 pt-28 pb-14 bg-[url(img/background-section.webp)] bg-no-repeat bg-cover bg-center">
@@ -10,26 +11,16 @@ import EmailIcon from '#icons/EmailIcon.astro'
             <div class="w-5/6 flex flex-col gap-y-8">
                 <h1 class="text-2xl uppercase font-semibold tracking-[3px]">About us</h1>
                 <span class="text-4xl tracking-[2.5px]">
-                    We Will Make Your Home Better By Providing <b class="text-6xl text-kv-500 font-bold">Exceptional Services like image Repairing, Plumbing, Electrical, etc</b> Within your Budget
+                    We Will Make Your Home Better By Providing <b class="text-6xl text-kva-500 font-bold">Exceptional Services like image Repairing, Plumbing, Electrical, etc</b> Within your Budget
                 </span>
             </div>
         </header>
         <div class="custom-grid p-5">
-            <div class="overflow-hidden w-full h-full rounded-2xl">
-                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
-            </div>
-            <div class="overflow-hidden w-full h-full rounded-2xl">
-                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
-            </div>
-            <div class="overflow-hidden w-full h-full rounded-2xl">
-                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
-            </div>
-            <div class="overflow-hidden w-full h-full rounded-2xl">
-                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
-            </div>
-            <div class="overflow-hidden w-full h-full rounded-2xl">
-                <img src="/img/services/service.webp" alt="servicio" class="w-full h-full object-cover">
-            </div>
+            <CardImage img="galery/galery-1.webp" />
+            <CardImage img="galery/galery-2.webp" />
+            <CardImage img="galery/galery-3.webp" />
+            <CardImage img="galery/galery-4.webp" />
+            <CardImage img="galery/galery-5.webp" />
         </div>
     </div>
     
@@ -46,7 +37,7 @@ import EmailIcon from '#icons/EmailIcon.astro'
             </span>
         </div>
         <div class="flex items-center gap-x-8">
-            <div class="h-0.5 bg-kv-500 w-40"></div>
+            <div class="h-0.5 bg-kva-500 w-40"></div>
             <strong class="text-2xl font-semibold">Book Your First Service & Get 30% Off</strong>
             <Button text="Book now" link="/" />
         </div>
@@ -54,7 +45,7 @@ import EmailIcon from '#icons/EmailIcon.astro'
 </section>
 
 <style>
-    .custom-grid {
+    :global(.custom-grid) {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(6, 80px);
@@ -62,9 +53,9 @@ import EmailIcon from '#icons/EmailIcon.astro'
         grid-row-gap: 40px;
     }
 
-    .custom-grid > div:nth-child(1) { grid-area: 2 / 1 / 7 / 2; }
-    .custom-grid > div:nth-child(2) { grid-area: 4 / 2 / 7 / 3; }
-    .custom-grid > div:nth-child(3) { grid-area: 3 / 3 / 7 / 4; }
-    .custom-grid > div:nth-child(4) { grid-area: 1 / 4 / 4 / 5; }
-    .custom-grid > div:nth-child(5) { grid-area: 4 / 4 / 7 / 5; }
+    :global(.custom-grid > div:nth-child(1)) { grid-area: 2 / 1 / 7 / 2; }
+    :global(.custom-grid > div:nth-child(2)) { grid-area: 4 / 2 / 7 / 3; }
+    :global(.custom-grid > div:nth-child(3)) { grid-area: 3 / 3 / 7 / 4; }
+    :global(.custom-grid > div:nth-child(4)) { grid-area: 1 / 4 / 4 / 5; }
+    :global(.custom-grid > div:nth-child(5)) { grid-area: 4 / 4 / 7 / 5; }
 </style>

@@ -7,7 +7,7 @@ export default {
 				'spin-slow': 'spin 10s linear infinite',
 			},
 			colors: {
-				'kv': {
+				'kva': {
 					'50': '#ebf9ff',
 					'100': '#d2f1ff',
 					'200': '#afe8ff',
