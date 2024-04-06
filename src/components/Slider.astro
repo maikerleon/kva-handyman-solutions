@@ -28,40 +28,39 @@ const tags = ["Gardening 1", "Gardening 2", "Gardening 3", "Gardening 4", "Garde
 </section>
 
 <style>
-.slider-wrapper {
-    animation: slide-infinite 20s linear infinite;
-}
-
-.slider-content:hover .slider-wrapper {
-    animation-play-state: paused;
-}
-
-.slider-content:before, .slider-content:after { 
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100px;
-    z-index: 2;
-    content: '';
-}
-
-.slider-content:before {
-    left: 0;
-    background: linear-gradient(to right, #08a2ff, transparent);
-}
-
-.slider-content:after {
-    right: 0;
-    background: linear-gradient(to left, #08a2ff, transparent);
-}
-
-@keyframes slide-infinite {
-    from {
-        transform: translateX(-100%);
+    .slider-wrapper {
+        animation: slide-infinite 20s linear infinite;
     }
-    to {
-        transform: translateX(0%);
-    }
-}
 
+    .slider-content:hover .slider-wrapper {
+        animation-play-state: paused;
+    }
+
+    .slider-content:before, .slider-content:after { 
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100px;
+        z-index: 2;
+        content: '';
+    }
+
+    .slider-content:before {
+        left: 0;
+        background: linear-gradient(to right, #08a2ff, transparent);
+    }
+
+    .slider-content:after {
+        right: 0;
+        background: linear-gradient(to left, #08a2ff, transparent);
+    }
+
+    @keyframes slide-infinite {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
 </style>
