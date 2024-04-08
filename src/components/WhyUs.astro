@@ -1,48 +1,59 @@
 ---
-import EmailIcon from "./icons/EmailIcon.astro"
+import PeopleIcon from "#icons/PeopleIcon.astro"
+import BrainIcon from "#icons/BrainIcon.astro"
+import CoinsIcon from "#icons/CoinsIcon.astro"
+import SpeedTestIcon from "#icons/SpeedTestIcon.astro"
+import ChatIcon from "#icons/ChatIcon.astro"
+import AwardIcon from "#icons/AwardIcon.astro"
 
 const articles = [
     {
-        title: 'Book Online',
-        description: 'Nullam consequat ex magna, ut facilisis mi fringilla tristi. Uncut sollicitudin.'
+        title: 'Professional Team',
+        description: 'Experienced experts dedicated to delivering top-notch results.',
+        icon: PeopleIcon
     },
     {
-        title: 'Book Online',
-        description: 'Nullam consequat ex magna, ut facilisis mi fringilla tristi. Uncut sollicitudin.'
+        title: 'Affordable Prices',
+        description: 'Competitive rates tailored to your budget and needs.',
+        icon: CoinsIcon
     },
     {
-        title: 'Book Online',
-        description: 'Nullam consequat ex magna, ut facilisis mi fringilla tristi. Uncut sollicitudin.'
+        title: 'Speed',
+        description: 'Efficient and prompt service to meet your deadlines.',
+        icon: SpeedTestIcon
     },
     {
-        title: 'Book Online',
-        description: 'Nullam consequat ex magna, ut facilisis mi fringilla tristi. Uncut sollicitudin.'
+        title: 'Experience',
+        description: 'Years of proven expertise in our field.',
+        icon: BrainIcon
     },
     {
-        title: 'Book Online',
-        description: 'Nullam consequat ex magna, ut facilisis mi fringilla tristi. Uncut sollicitudin.'
+        title: 'Feedback',
+        description: 'Continuous improvement through valuable client input.',
+        icon: ChatIcon
     },
     {
-        title: 'Book Online',
-        description: 'Nullam consequat ex magna, ut facilisis mi fringilla tristi. Uncut sollicitudin.'
+        title: 'Guaranteed Satisfaction',
+        description: 'Confidence in our services with your complete satisfaction.',
+        icon: AwardIcon
     }
-]
+];
 ---
 
 <section class="flex items-center flex-col w-full px-10 py-32 bg-[url(img/background-why.webp)] bg-no-repeat bg-cover bg-center">
     <header class="space-y-4">
-        <h2 class="text-center uppercase text-gray-700 tracking-[6px] text-base font-semibold">People Trust</h2>
-        <h1 class="capitalize text-center text-5xl font-bold text-kva-900">Why we are best</h1>
+        <h2 class="text-center uppercase text-gray-700 tracking-[6px] text-lg font-semibold">Guaranteed security</h2>
+        <h1 class="capitalize text-center text-5xl font-bold text-kva-900">Why are we your best option?</h1>
     </header>
     <div class="grid grid-cols-3 mt-16 px-16 gap-14">
-        { articles.map(article => (
-            <article class="flex items-center justify-center gap-x-6">
+        { articles.map(({title, description, icon: Icon}) => (
+            <article class="flex items-center justify-center gap-x-6 animate-zoom">
                 <div>
-                    <EmailIcon size={80} styles="text-gray-400/40" />
+                    <Icon size={60} styles="text-gray-300" />
                 </div>
-                <div class="space-y-4 max-w-64">
-                    <h3 class="text-2xl font-semibold">{ article.title }</h3>
-                    <p class="text-kva-900 text-base font-medium">{ article.description }</p>
+                <div class="space-y-4 max-w-72">
+                    <h3 class="text-2xl font-semibold">{ title }</h3>
+                    <p class="text-kva-900 text-base font-medium text-pretty max-w-64">{ description }</p>
                 </div>
             </article>
         )) }

@@ -1,0 +1,13 @@
+---
+import {socials} from '#lib/data.ts';
+---
+
+{
+    socials.map( ({link, icon: Icon, size}) => (
+        (link !== "" && (
+            <a rel="nofollow noopener noreferrer" href={link} target="_blank">
+                <Icon size={size} />
+            </a>
+        ))
+    ))
+}

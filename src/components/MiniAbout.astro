@@ -1,5 +1,5 @@
 ---
-import {data} from '#lib/data.ts'
+import {data, services} from '#lib/data.ts'
 import Button from '#components/Button.astro'
 import PhoneIcon from '#icons/PhoneIcon.astro'
 import EmailIcon from '#icons/EmailIcon.astro'
@@ -7,25 +7,25 @@ import CardImage from './CardImage.astro'
 ---
 <section class="text-gray-600">
     <div class="px-16 pt-28 pb-14 bg-[url(img/background-section.webp)] bg-no-repeat bg-cover bg-center">
-        <header class="flex items-center gap-x-36">
+        <header class="flex items-center gap-x-36 animate-slide-left">
             <div class="w-5/6 flex flex-col gap-y-8">
                 <h1 class="text-2xl uppercase font-semibold tracking-[3px]">About us</h1>
-                <span class="text-4xl tracking-[2.5px]">
-                    We Will Make Your Home Better By Providing <b class="text-6xl text-kva-500 font-bold">Exceptional Services like image Repairing, Plumbing, Electrical, etc</b> Within your Budget
+                <span class="text-4xl tracking-[2.5px] text-balance">
+                    Transform Your Home with Exceptional Services: <b class="text-6xl text-kva-500 font-bold">Repairs, Plumbing, Electrical Work, and More,</b> All Tailored to Your Budget.
                 </span>
             </div>
         </header>
         <div class="custom-grid p-5">
-            <CardImage img="galery/galery-1.webp" />
-            <CardImage img="galery/galery-2.webp" />
-            <CardImage img="galery/galery-3.webp" />
-            <CardImage img="galery/galery-4.webp" />
-            <CardImage img="galery/galery-5.webp" />
+            {
+                services.map(service => (
+                    <CardImage serviceData={service} />
+                ))
+            }
         </div>
     </div>
     
     <aside class="flex bg-slate-800 text-white justify-between px-12 py-6 items-center">
-        <div class="flex items-center gap-x-8">
+        <div class="flex items-center gap-x-8 animate-slide-left-mini">
             <span class="flex items-center gap-x-2">
                 <PhoneIcon size={35} />
                 <strong class="text-lg font-normal">{data.phone}</strong>
@@ -36,10 +36,10 @@ import CardImage from './CardImage.astro'
                 <strong class="text-lg font-normal">{data.email}</strong>
             </span>
         </div>
-        <div class="flex items-center gap-x-8">
+        <div class="flex items-center gap-x-8 animate-slide-right-mini">
             <div class="h-0.5 bg-kva-500 w-40"></div>
-            <strong class="text-2xl font-semibold">Book Your First Service & Get 30% Off</strong>
-            <Button text="Book now" link="/" />
+            <strong class="text-2xl font-semibold">Quote Your First Service today!</strong>
+            <Button text="Quote now" link="/" />
         </div>
     </aside>
 </section>
@@ -48,7 +48,7 @@ import CardImage from './CardImage.astro'
     :global(.custom-grid) {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 80px);
+        grid-template-rows: repeat(13, 70px);
         grid-column-gap: 40px;
         grid-row-gap: 40px;
     }
@@ -58,4 +58,12 @@ import CardImage from './CardImage.astro'
     :global(.custom-grid > div:nth-child(3)) { grid-area: 3 / 3 / 7 / 4; }
     :global(.custom-grid > div:nth-child(4)) { grid-area: 1 / 4 / 4 / 5; }
     :global(.custom-grid > div:nth-child(5)) { grid-area: 4 / 4 / 7 / 5; }
+    :global(.custom-grid > div:nth-child(6)) { grid-area: 7 / 1 / 10 / 3; }
+    :global(.custom-grid > div:nth-child(7)) { grid-area: 7 / 3 / 12 / 4; }
+    :global(.custom-grid > div:nth-child(8)) { grid-area: 7 / 4 / 10 / 5; }
+    :global(.custom-grid > div:nth-child(9)) { grid-area: 10 / 1 / 14 / 2; }
+    :global(.custom-grid > div:nth-child(10)) { grid-area: 10 / 2 / 12 / 3; }
+    :global(.custom-grid > div:nth-child(11)) { grid-area: 12 / 2 / 14 / 3; }
+    :global(.custom-grid > div:nth-child(12)) { grid-area: 10 / 4 / 12 / 5; }
+    :global(.custom-grid > div:nth-child(13)) { grid-area: 12 / 3 / 14 / 5; }
 </style>

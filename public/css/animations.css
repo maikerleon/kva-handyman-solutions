@@ -1,0 +1,99 @@
+@keyframes show {
+    from {
+        opacity: 0.50;
+        scale: 75%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeftMini {
+    from {
+        transform: translateX(-6%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRightMini {
+    from {
+        transform: translateX(6%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-zoom {
+    view-timeline-name: --zoom;
+    view-timeline-axis: block;
+    animation-timeline: --zoom;
+    animation-name: show;
+    animation-range: entry 1% cover 40%;
+    animation-fill-mode: both;
+}
+
+.animate-slide-right {
+    view-timeline-name: --slideRight;
+    view-timeline-axis: block;
+    animation-timeline: --slideRight;
+    animation-name: slideInFromRight;
+    animation-range: entry 1% cover 70%;
+    animation-fill-mode: both;
+}
+
+.animate-slide-left {
+    view-timeline-name: --slideLeft;
+    view-timeline-axis: block;
+    animation-timeline: --slideLeft;
+    animation-name: slideInFromLeft;
+    animation-range: entry 1% cover 70%;
+    animation-fill-mode: both;
+}
+
+.animate-slide-right-mini {
+    view-timeline-name: --slideRightMini;
+    view-timeline-axis: block;
+    animation-timeline: --slideRightMini;
+    animation-name: slideInFromRightMini;
+    animation-range: entry 1% cover 70%;
+    animation-fill-mode: both;
+}
+
+.animate-slide-left-mini {
+    view-timeline-name: --slideLeftMini;
+    view-timeline-axis: block;
+    animation-timeline: --slideLeftMini;
+    animation-name: slideInFromLeftMini;
+    animation-range: entry 1% cover 70%;
+    animation-fill-mode: both;
+}
