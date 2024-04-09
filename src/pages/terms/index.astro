@@ -1,0 +1,13 @@
+---
+import { data } from "#lib/data.ts";
+import Layout from '../../layouts/Layout.astro';
+import TitleSection from "#components/TitleSection.astro";
+import Terms from "#components/Terms.astro";
+---
+
+<Layout title=`${data.title} | Terms & Conditions`>
+	<div class="flex flex-col w-full">
+                <TitleSection title="Terms & Conditions" />
+                <Terms />
+	</div>
+</Layout>

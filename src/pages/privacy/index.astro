@@ -1,0 +1,13 @@
+---
+import { data } from "#lib/data.ts";
+import Layout from '../../layouts/Layout.astro';
+import TitleSection from "#components/TitleSection.astro";
+import Privacy from "#components/Privacy.astro";
+---
+
+<Layout title=`${data.title} | Privacy Policy`>
+	<div class="flex flex-col w-full">
+                <TitleSection title="Privacy Terms" />
+                <Privacy />
+	</div>
+</Layout>

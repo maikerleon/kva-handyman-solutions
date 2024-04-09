@@ -1,17 +1,18 @@
 ---
+import {data} from '#lib/data.ts'
 import Button from '#components/Button.astro'
 ---
 
 <section class="bg-[url(img/section-banner.webp)] min-h-[700px] object-coverbg-no-repeat bg-cover bg-center w-full flex flex-col justify-end text-white items-end relative">
-    <div class="absolute bg-black/60 z-0 w-full h-full"></div>
-    <div class="p-20 relative z-10">
-        <div class="max-w-[40rem] space-y-6 animate-slide-right">
-            <h1 class="text-right text-5xl font-semibold leading-snug">We can <strong class="font-bold text-kva-500">assist you</strong> with all aspects of house repair.</h1> 
+    <div class="absolute bg-black/60 z-0 w-full h-full" id="about"></div>
+    <div class="md:p-20 p-10 relative z-10">
+        <div class="md:max-w-[40rem] space-y-6 animate-slide-right">
+            <h1 class="text-right text-2xl md:text-5xl font-semibold leading-snug">We can <strong class="font-bold text-kva-500">assist you</strong> with all aspects of house repair.</h1> 
             <p class="text-right text-balance">Discover seamless house repair solutions: water fixtures installation, emergency services, TV mounting, garbage disposal setup, lighting upgrades, indoor painting, fan installation and repair, furniture assembly, and more for your home or business.</p>
             <h2 class="font-semibold text-right text-2xl">Ready for a better home? Contact us today!</h2>
-            <div class="text-right">
-                <div class="mt-16">
-                    <Button text="Contact now" link="/" />
+            <div class="text-right flex justify-end">
+                <div class="md:mt-16 mt-10">
+                    <Button text="Contact now" link=`mailto:${data.email}?subject=Free Quote KVA&body=Hello,%20I%20need%20to%20make%20a%20quote%20for%20my%20home,%20I%20need%20to%20make:` linkPhone=`sms:${data.phone}?body=Hello,%20I%20need%20to%20make%20a%20quote%20for%20my%20home,%20I%20need%20to%20make:` />
                 </div>
             </div>
         </div>

@@ -1,0 +1,14 @@
+---
+const {title} = Astro.props;
+---
+
+<section class="px-10 py-20 w-full min-h-20 bg-kva-950 text-white flex justify-center items-center flex-col relative">
+    <div class="absolute w-full h-full opacity-[0.02] bg-[url(img/figure-background-section.webp)] bg-repeat">
+    </div>
+    <h1 class="uppercase text-4xl font-bold tracking-[2px] z-20 text-center">{title}</h1>
+    <div class="text-lg mt-3 font-light z-20">
+        <a href="/" class="font-semibold">Home</a>
+        <span>/</span>
+        <span class="font-semibold">{title}</span>
+    </div>
+</section>

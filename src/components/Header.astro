@@ -3,18 +3,27 @@ import { data } from "#lib/data.ts";
 import Socials from "#components/Socials.astro";
 import EmailIcon from "#icons/EmailIcon.astro";
 import LocationIcon from "#icons/LocationIcon.astro";
+import PhoneIcon from "#icons/PhoneIcon.astro";
 ---
 
-<header class="w-full flex bg-kva-900 text-white h-12">
-    <section class="max-w-[92%] w-full mx-auto py-2 flex justify-between items-center">
-        <ul class="flex gap-x-12 [&>li]:flex [&>li]:gap-x-1 [&>li]:items-center items-center">
+<header class="w-full flex bg-kva-900 text-white md:h-12">
+    <section class="max-w-[92%] w-full mx-auto py-2 flex justify-between md:items-center">
+        <ul class="flex gap-x-2 md:gap-x-12 [&>li>a]:gap-x-1 [&>li>a]:items-center items-center">
             <li>
-                <EmailIcon size={24} styles="mr-0.5" />
-                <span>{data.email}</span>
+                <a href=`mailto:${data.email}?subject=Free Quote KVA&body=Hello,%20I%20need%20to%20make%20a%20quote%20for%20my%20home,%20I%20need%20to%20make:` class="hidden md:flex">
+                    <EmailIcon size={20} styles="mr-0.5" />
+                    <span class="hidden md:block">{data.email}</span>
+                </a>
+                <a href=`tel:${data.phone}` class="flex md:hidden">
+                    <PhoneIcon size={20} styles="mr-0.5" />
+                    <span class="hidden md:block">{data.phoneFormat}</span>
+                </a>
             </li>
             <li>
-                <LocationIcon size={24} />
-                <span>{data.address}</span>
+                <a href="https://www.google.com/maps/place/1801+NE+180th+St,+North+Miami+Beach,+FL+33162/data=!4m2!3m1!1s0x88d9adb55002c439:0xd940a9b0137c5211?sa=X&ved=1t:242&ictx=111" target="_blank" class="flex">
+                    <LocationIcon size={20} />
+                    <span class="hidden md:block">{data.address}</span>
+                </a>
             </li>
         </ul>
         <ul class="flex gap-x-6 [&>li]:flex [&>li]:gap-x-1 [&>li]:items-center items-center">

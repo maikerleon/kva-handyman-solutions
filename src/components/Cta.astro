@@ -12,15 +12,15 @@ import {data} from '#lib/data.ts'
                 <p class="text-gray-500 leading-relaxed mt-3 text-pretty">
                     Our team turns your ideas into tangible realities with services like design consultations, project planning, and skilled craftsmanship. From water fixture installations to TV mounting, we ensure exceptional results for your home or business.
                 </p>
-                <a class="mt-5 px-6 py-4 text-kva-600 font-medium bg-kva-50 inline-flex items-center text-base" href="/">
+                <a class="mt-5 px-6 py-4 text-kva-600 font-medium bg-kva-50 inline-flex items-center text-base group transition-all" href=`mailto:${data.email}?subject=Free Quote KVA&body=Hello,%20I%20need%20to%20make%20a%20quote%20for%20my%20home,%20I%20need%20to%20make:`>
                     Try free quote
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1 duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1 group-hover:ml-5 duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
             </div>
             <div class="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
-                <img src="img/handyman-cta.webp" alt={`Handyman services by ${data.title}`} class="w-full animate-zoom" style="clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);" loading="lazy" />
+                <img src="img/handyman-cta.webp" alt={`Handyman services by ${data.title}`} class="w-full animate-zoom aspect-auto" style="clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);" loading="lazy" />
             </div>
         </div>
     </div>

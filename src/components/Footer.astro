@@ -9,19 +9,19 @@ import YoutubeIcon from '#icons/YoutubeIcon.astro';
 const footerNavs = [
     {
         name: 'About us',
-        link: '/'
+        link: '/#about'
     },
     {
         name: 'Services',
-        link: '/'
+        link: '/#services'
     },
     {
         name: 'Terms',
-        link: '/'
+        link: '/terms'
     },
     {
         name: 'Privacy',
-        link: '/'
+        link: '/privacy'
     }
 ];
 ---
@@ -49,17 +49,16 @@ const footerNavs = [
                 </div>
             </div>
             <div class="mt-6">
-                <p class="text-white font-semibold text-3xl">How long will you wait?</p>
+                <p class="text-white font-semibold md:text-3xl text-lg md:text-start text-end">How long will you wait?</p>
                 <div class="flex items-end gap-3 mt-5 flex-col">
-                    <Button text="Get Quote now" link="sms:+123456789?body=Hola,%20¿cómo%20estás?" />
-                    <Button text="Get Quote now" link="mailto:tuemail@example.com?subject=Asunto del correo&body=Hola,%20¿cómo%20estás?" />
+                    <Button text="Get Quote now" link=`mailto:${data.email}?subject=Free Quote KVA&body=Hello,%20I%20need%20to%20make%20a%20quote%20for%20my%20home,%20I%20need%20to%20make:` linkPhone=`sms:${data.phone}?body=Hello,%20I%20need%20to%20make%20a%20quote%20for%20my%20home,%20I%20need%20to%20make:` />
                 </div>
                 <ul class="flex gap-x-4 [&>li]:flex [&>li]:gap-x-1 [&>li]:items-center items-center mt-5 justify-end">
                     <Socials />
                 </ul>
             </div>
         </div>
-        <div class="mt-10 py-10 border-t border-gray-100/10 md:text-center">
+        <div class="mt-10 py-10 border-t border-gray-100/10 text-center">
             <p>© {new Date().getFullYear()} {data.title}.</p>
         </div>
     </div>
