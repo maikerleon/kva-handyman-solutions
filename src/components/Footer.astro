@@ -3,9 +3,6 @@
 import { data } from '#lib/data.ts';
 import Socials from "#components/Socials.astro";
 import Button from '#components/Button.astro';
-import FacebookIcon from '#icons/FacebookIcon.astro';
-import InstagramIcon from '#icons/InstagramIcon.astro';
-import YoutubeIcon from '#icons/YoutubeIcon.astro';
 const footerNavs = [
     {
         name: 'About us',
@@ -37,7 +34,7 @@ const footerNavs = [
                 <div>
                     <ul class="flex flex-wrap items-center gap-4 text-sm sm:text-base mt-14">
                         {
-                            footerNavs.map((item, idx) => (
+                            footerNavs.map((item) => (
                                 <li class="text-gray-300 hover:text-white duration-150">
                                     <a href={item.link}>
                                         {item.name}
