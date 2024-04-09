@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/  # Bloquea el acceso a la carpeta de administración
+Disallow: /private/  # Bloquea el acceso a la carpeta privada
+Disallow: /temp/  # Bloquea el acceso a la carpeta temporal
+Disallow: /cgi-bin/  # Bloquea el acceso a la carpeta cgi-bin
+
+Allow: /  # Permite el acceso a todas las demás partes del sitio
