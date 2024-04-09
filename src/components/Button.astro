@@ -9,5 +9,5 @@ interface Props {
 const {text, linkPhone, link, styles = ''} = Astro.props;
 ---
 
-<a rel="nofollow noopener noreferrer" href={link} class=`${styles} bg-kva-500 px-8 py-3 text-lg text-white max-w-fit hover:scale-[1.15] transition-all hidden md:block`>{text}</a>
-<a rel="nofollow noopener noreferrer" href={linkPhone || link} class=`${styles} bg-kva-500 px-8 py-3 text-lg text-white max-w-fit hover:scale-[1.15] transition-all block md:hidden`>{text}</a>
+<a rel="nofollow noopener noreferrer" href={link} class=`${styles} bg-kva-600 px-8 py-3 text-lg text-white max-w-fit hover:scale-[1.15] transition-all hidden md:block`>{text}</a>
+<a rel="nofollow noopener noreferrer" href={linkPhone || link} class=`${styles} bg-kva-600 px-8 py-3 text-lg text-white max-w-fit hover:scale-[1.15] transition-all block md:hidden`>{text}</a>

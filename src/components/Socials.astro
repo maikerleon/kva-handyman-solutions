@@ -1,13 +1,16 @@
 ---
-import {socials} from '#lib/data.ts';
+import {socials, data} from '#lib/data.ts';
 ---
 
 {
-    socials.map( ({link, icon: Icon, size}) => (
+    socials.map( ({link, icon: Icon, size, title}) => (
         (link !== "" && (
-            <a rel="nofollow noopener noreferrer" href={link} target="_blank" class="text-gray-200 hover:text-white hover:scale-[1.20] transition-all">
-                <Icon size={size} />
-            </a>
+            <li>
+                <a rel="nofollow noopener noreferrer" href={link} target="_blank" class="text-gray-200 hover:text-white hover:scale-[1.20] transition-all">
+                    <span class="sr-only capitalize">{title} of {data.title}</span>
+                    <Icon size={size} />
+                </a>
+            </li>
         ))
     ))
 }
