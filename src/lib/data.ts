@@ -44,7 +44,7 @@ export let socials = [
     },
     {
         title: 'tiktok',
-        link : '',
+        link : 'https://www.tiktok.com/@kvahandymanservices',
         icon: TiktokIcon,
         size: 18
     }
