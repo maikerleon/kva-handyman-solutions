@@ -26,7 +26,7 @@ export const data: Data = {
 export let socials = [
     {
         title: 'facebook',
-        link : '',
+        link : 'https://www.facebook.com/kvahandymanservices',
         icon: FacebookIcon,
         size: 18
     },
