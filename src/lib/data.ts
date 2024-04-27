@@ -32,7 +32,7 @@ export let socials = [
     },
     {
         title: 'instagram',
-        link : 'https://www.instagram.com/k.v.a_handyman_services/',
+        link : 'https://www.instagram.com/kvahandymanservices/',
         icon: InstagramIcon,
         size: 26
     },
